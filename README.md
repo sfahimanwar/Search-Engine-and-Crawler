@@ -96,6 +96,7 @@ pageSchema.query.byID = function (pageID) {
 const WikiPage = mongoose.model("WikiPage", pageSchema);
 
 module.exports = WikiPage;
+```
 
 ## Crawling Process
 
