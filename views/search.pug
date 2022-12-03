@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Search Results
+    body
+        h1 Top #{limit} Results for #{query}
+        br
+        hr
+        ol
+            each result in toSend
+                li
+                    p URL :
+                        a(href = result.url) #{result.url}
+                    p Title: #{result.title}
+                    p PageRank value: #{result.pagerank}
+                    p Search score: #{result.score}
+                    if  searchType === 'fruits'
+                        a(href = '/fruits/' + result.pageID) More information on the page
+                    else
+                        a(href = '/wiki/' + result.pageID) More information on the page
+                    br
+

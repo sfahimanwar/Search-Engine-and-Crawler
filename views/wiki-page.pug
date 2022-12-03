@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Wiki Page ID: #{toSend.pageID}
+    body
+        h1 Wiki Page ID: #{toSend.pageID}
+        br
+        hr
+        p URL :
+            a(href = toSend.url) #{toSend.url}
+        p Title of page: #{toSend.title}
+        p List of incoming links:
+        ol
+            each link in toSend.incoming
+                li
+                    a(href = link) #{link}
+        p List of outgoing links:
+        ol
+            each link in toSend.outgoing
+                li
+                    a(href = link) #{link}
+        p Word Frequency:
+        ul
+            each val, key in toSend.wordFrequency
+                li= key + ': ' + val

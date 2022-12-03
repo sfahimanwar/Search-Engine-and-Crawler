@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Home
+    body
+        div#maindiv
+        h1 Assignment 1 - Search Engine
+        hr
+        h3 Search for Fruits
+        input#searchTextFruit(type='text' name='searchText' placeholder='Search Fruit pages' required)
+        br
+        p Enter the number of results you want
+        input#numResultsFruit(type='number' name='numResultsFruit' placeholder='Enter number of results required' min='1' max='50' value='10')
+        br
+        p Do you want the results boosted by the PageRank?
+        select#boostFruits(name = 'boostFruits')
+            option(value='true') True
+            option(value='false') False
+        br
+        br
+        button#searchButtonFruit(type='submit') Search Fruits
+        br
+        br
+        hr
+        h3 Search for Wiki
+        input#searchTextWiki(type='text' name='searchText' placeholder='Search Wiki pages' required)
+        br
+        p Enter the number of results you want
+        input#numResultsWiki(type='number' name='numResultsWiki' placeholder='Enter number of results required' min='1' max='50' value='10')
+        br
+        p Do you want the results boosted by the PageRank?
+        select#boostWiki(name = 'boostWiki')
+            option(value='true') True
+            option(value='false') False
+        br
+        br
+        button#searchButtonWiki(type='submit') Search Wiki
+        script(src='/client.js')
